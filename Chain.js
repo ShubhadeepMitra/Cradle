@@ -1,14 +1,14 @@
 class chain{
     constructor(bodyA,bodyB,offsetX,offsetY){
-        this.offsetX=offsetX
-        this.offsetY=offsetY
         var options={
             bodyA:bodyA,
             bodyB:bodyB,
             //stiffness:0.7,
-            //length:10,
+            length:10,
             pointB:{x:this.offsetX,y:this.offsetY}
         }
+        this.offsetX=offsetX
+        this.offsetY=offsetY
         this.chain=Constraint.create(options);
         World.add(world,this.chain);
     }
